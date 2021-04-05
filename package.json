@@ -1,0 +1,35 @@
+{
+	"name": "learning",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/razumeyka/dolls.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/razumeyka/dolls/issues"
+	},
+	"homepage": "https://github.com/razumeyka/dolls#readme",
+	"devDependencies": {
+		"browser-sync": "^2.2.3",
+		"eslint-plugin-react": "^7.22.0",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^3.10.0",
+		"gulp-file-include": "^2.0.1",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^1.5.0",
+		"gulp-watch": "^5.0.1"
+	},
+	"dependencies": {
+		"gulp-uglify": "^3.0.2",
+		"imask": "^6.0.7",
+		"js-datepicker": "^5.18.0"
+	}
+}

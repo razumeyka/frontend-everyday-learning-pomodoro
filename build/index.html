@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css"> 
+    <title>Обучение</title>
+	<script src="/js/main.js"></script>
+</head>
+<body>
+	<main>
+		<div class="pomodoro">
+			<div class="pomodoro__heading">pomodoro</div>
+			<div class="pomodoro__nav">
+				<div class="pomodoro__button active" id="pomodoro-btn">pomodoro</div>
+				<div class="pomodoro__button" id="short-break-btn">short break</div>
+				<div class="pomodoro__button" id="long-break-btn">long break</div>
+			</div>
+			<div class="pomodoro__timer-wrap">
+				<div class="pomodoro__timer">
+					<div class="pomodoro__diagram diagram">
+						<div class="diagram__piece diagram__piece_left"></div>
+						<div class="diagram__piece diagram__piece_right"></div>
+					</div>
+					<div class="timer">
+						<div class="timer__item">
+							<div id="minutes" class="timer__num">00</div>
+						</div>
+						<div class="timer__separator">:</div>
+						<div class="timer__item">
+							<div id="seconds" class="timer__num">00</div>
+						</div>
+					</div>
+					<div class="pomodoro__play-btn paused">restart</div>
+				</div>
+			</div>
+			<div class="pomotoro__settings-btn js-popup-btn">settings</div>
+			<div class="popup">
+				<div class="popup__content">
+					<div class="popup__caption">Settings</div>
+					<div>pomodoro</div>
+					<input type="number" name="pomodoro" id="pomodoro-value" value="25" min="1" max="100" required>
+					<div>short break</div>
+					<input type="number" name="break" id="short-break-value" value="5" min="1" max="100" required>
+					<div>long break</div>
+					<input type="number" name="longbreak" id="long-break-value" value="15" min="1" max="100" required>
+					<button class="popup__button button">Apply</button>
+					<div class="popup__close"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html> 

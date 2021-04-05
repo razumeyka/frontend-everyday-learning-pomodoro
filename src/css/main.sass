@@ -1,0 +1,227 @@
+@import parts/_fonts
+@import parts/_variables
+@import parts/_base-blocks
+@import parts/_animations
+@import parts/_modals
+@import parts/_choices
+@import parts/_nouislider
+@import parts/_datepicker
+@import parts/_pomodoro
+
+.calculator
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 70px 0;
+	overflow: hidden;
+	&__caption
+		font-size: 40px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 20px;
+	&__row
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0;
+		margin: 0 -15px;
+		&_profile
+			align-items: flex-end
+		&_delivery
+			align-items: center;
+		&_summary
+			justify-content: flex-end;
+	&__heading
+		color: $primary-color;
+		margin: 10px 0;
+
+.form
+	max-width: 800px;
+	&__item
+		position: relative;
+		margin: 15px;
+		&_address
+			position: absolute;
+			transition: all 0.2s linear;
+			transform: translate(0, 35px);
+			opacity: 0;
+			input
+				height: 0;
+			&.show
+				position: static;
+				transform: translate(0, 0);
+				opacity: 1;
+				input
+					height: 46px;
+	&__label
+		font-size: 11px;
+		color: #858C94;
+		background: #fff;
+		padding: 5px;
+		position: absolute;
+		top: -13px
+		left: 15px
+		span
+			color: red;
+			font-size: 12px;
+			font-weight: 500;
+			margin-left: 3px;
+	&__details
+		font-size: 10px;
+		color: #a0a1a5;
+		position: absolute;
+		left: 0;
+		bottom: -13px;
+	&__figure
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		padding: 15px;
+
+fieldset
+	border: none;
+	padding: 0 20px;
+
+input
+	display: block;
+	box-sizing: border-box;
+	height: 46px;
+	width: 220px;
+	outline: 0;
+	padding: 0 20px;
+	border: 1px solid #858C94;
+	border-radius: 4px;
+	background: #fff;
+	font-size: 16px;
+	color: #000000;
+	&:not([type=submit]):focus
+		border: 1px solid $primary-color;
+		+ .form__label
+			color: $primary-color;
+	// &:invalid
+	// 	border: 1px solid red;
+	// 	&:not([type=submit]):focus
+	// 		border: 1px solid red;
+
+input:-webkit-autofill
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+
+input[type="number"]
+	-moz-appearance: textfield;
+	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+		-webkit-appearance: none;
+		margin: 0;
+	&:hover, &:focus
+		-moz-appearance: number-input;
+
+input[type="checkbox"]
+	display: none;
+
+.checkbox-round
+	top: 0;
+	transition: top 0.2s linear;
+	&.moved
+		position: absolute;
+		top: -35px;
+	input[type=checkbox]
+		vertical-align: top;
+		margin: 0 3px 0 0;
+		width: 17px;
+		height: 17px;
+		&:not(checked)
+			position: absolute;
+			opacity: 0;	
+			& + label
+				position: relative; 
+				padding: 0 0 0 60px; 
+				font-size: 14px;
+				&:before
+					content: '';
+					position: absolute;
+					top: 2px;
+					left: 0px;
+					width: 40px;
+					height: 14px;
+					background: rgba(11, 95, 255, 0.5);
+					border-radius: 7px;
+				&:after
+					content: '';
+					position: absolute;
+					top: -3px;
+					left: -4px;
+					z-index: 1;
+					border-radius: 50%;
+					transition: all .2s;
+					width: 22px;
+					height: 22px;
+					background: #FFFFFF;
+					border: 1px solid rgba(11, 95, 255, 0.5);
+		&:checked + label
+			&:before
+				background: #DADEE3;
+			&:after
+				left: 22px;
+				background: $primary-color;
+				border: 1px solid $primary-color;
+		&:hover + label:after
+				box-shadow: 0 0 0px 8px rgba(0, 84, 240, 0.1);
+
+select
+	width: 220px;
+
+textarea
+	display: block;
+	box-sizing: border-box;
+	min-height: 118px;
+	resize: vertical;
+	width: 220px;
+	outline: 0;
+	padding: 12px 20px;
+	border: 1px solid #858C94;
+	border-radius: 4px;
+	background: #fff;
+	font-family: "TT Norms";
+	font-size: 16px;
+	color: #000000;
+	&:not([type=submit]):focus
+		border: 1px solid $primary-color;
+		+ .form__label
+			color: $primary-color;
+
+.qs-datepicker-container
+	width: 100%;
+	
+.qs-controls
+    background: #ebeef2;
+
+.qs-day
+    font-size: 14px;
+    font-weight: 600;
+    color: #365fff;
+	
+.figure
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+	background: $primary-color;
+	border: 1px solid $primary-color;
+	border-radius: 4px;
+	transition: all 0.2s linear;
+	&__weight
+		font-weight: 700;
+		font-size: 20px;
+		color: #fff;
+
+
+/*media*/ 
+
+@media screen and (max-width: 767px)
+	.calculator__row
+		flex-direction: column;
+	

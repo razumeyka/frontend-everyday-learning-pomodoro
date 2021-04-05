@@ -1,0 +1,130 @@
+*
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+
+body
+	background: #1E213F;
+	font-family: "TT Norms", sans-serif
+	font-size: 14px
+	font-weight: 400
+	color: rgb(255, 255, 255)
+	line-height: 1.4
+	min-width: 320px
+
+.container
+	position: relative
+
+.content
+	height: 100vh;
+	background: $dark-bg;
+	padding: 110px 60px 0;
+	margin-left: 290px;
+	position: relative;
+
+.heading
+	font: 400 26px "TT Norms"
+	color: $dark-color
+
+.button
+	display: inline-block
+	cursor: pointer
+	text-decoration: none
+	outline: none
+	border: none
+	background: #F87070;
+	border-radius: 26.5px;
+	font: 500 20px/1 "TT Norms"
+	text-transform: capitalize
+	color: #FFFFFF
+	text-align: center
+	padding: 18px 25px 18px
+	transition: all 0.3s linear
+	position: relative
+	width: 100%;
+	max-width: 220px;
+	&_plus
+		padding: 18px 25px 18px 55px
+		&:before
+			content: ""
+			width: 20px
+			height: 1px
+			background: #fff
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 20px
+			margin: auto 0
+		&:after
+			content: ""
+			height: 20px
+			width: 1px
+			background: #fff
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 30px
+			margin: auto 0
+
+.select
+	position: relative;
+	&__field
+		font: 400 18px "TT Norms";
+		text-transform: capitalize;
+		color: $text-color;
+		padding-right: 30px;
+		position: relative;
+		cursor: pointer;
+		&:before
+			content: "";
+			width: 4px;
+			height: 4px;
+			border-right: 1px solid #707c97;
+			border-bottom: 1px solid #707c97;
+			position: absolute;
+			right: 13px;
+			top: 0;
+			bottom: 2px;
+			margin: auto 0;
+			transform: rotate(45deg);
+			transition: all 0.3s linear 0s;
+		&.open:before
+			bottom: -5px;
+			transform: rotate(225deg);
+	ul
+		display: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border-radius: 6px;
+		border: 1px solid #F5F4FB;
+		list-style: none;
+		position: absolute; 
+		top: calc(100% + 10px);
+		left: 0;
+		z-index: 2;
+		&.open
+			display: block;
+	li
+		display: block;
+		box-sizing: border-box;
+		background-color: rgb(255, 255, 255);
+		border-bottom: 1px solid #f9f5ef; 
+		font-size: 14px;
+		color: $text-color;
+		padding: 7px 10px;
+		cursor: pointer;
+		&:last-child
+			border-bottom: 0;
+		&:hover
+			background: $light-bg;
+		&.active
+			display: none;
+
+/*media*/ 
+
+@media screen and (max-width: 1823px)
+
+	.content
+		padding: 80px 40px 0;
+		margin-left: 250px;
