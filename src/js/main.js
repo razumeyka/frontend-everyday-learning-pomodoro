@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		event.target.classList.add("active");
 		clearInterval(timeInterval);
 		clearInterval(progressInterval);
+		progressView(0);
 		setClock(workingTime);
 		
 		mainPomodoroButton.textContent = "pause";
@@ -115,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		event.target.classList.add("active");
 		clearInterval(timeInterval);
 		clearInterval(progressInterval);
+		progressView(0);
 		setClock(shortBreak);
 		
 		mainPomodoroButton.textContent = "pause";
@@ -128,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		event.target.classList.add("active");
 		clearInterval(timeInterval);
 		clearInterval(progressInterval);
+		progressView(0);
 		setClock(longBreak);
 		
 		mainPomodoroButton.textContent = "pause";
@@ -151,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 			clearInterval(timeInterval);
 			clearInterval(progressInterval);
+			progressView(0);
 			mainPomodoroButton.textContent = "restart";
 			mainPomodoroButton.classList.add("paused");
 			
